@@ -25,7 +25,7 @@ function LandingPage() {
     .then(response => {
         
         console.log(response)
-        setMovies(response.results)
+        setMovies([...Movies, ...response.results])
         setMainMovieImage(response.results[0])
         setCurrentPage(response.page)
     })
